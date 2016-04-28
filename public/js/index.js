@@ -1,7 +1,6 @@
 'use strict';
 
 var fs = require('fs');
-var ghm = require('github-flavored-markdown');
 var marked = require('marked');
 var minimist = require('minimist');
 var path = require('path');
@@ -39,7 +38,7 @@ function renderMd(filePath) {
 
 	process.chdir(path.dirname(filePath));
 
-	contentElement.innerHTML = ghm.parse(fileContents);
+	contentElement.innerHTML = marked(fileContents);
 
 	process.chdir(CWD);
 }
