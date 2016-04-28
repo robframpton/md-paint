@@ -1,13 +1,13 @@
 {
   "name": "md-paint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "View rendered markdown files with github flavored markdown while using your favorite editor",
   "main": "app.js",
   "scripts": {
     "test": "npm test"
   },
   "bin": {
-    "md_paint" : "./bin/paint.js"
+    "md_paint": "./bin/paint.js"
   },
   "repository": {
     "type": "git",
