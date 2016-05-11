@@ -4,8 +4,10 @@ var fs = require('fs');
 var marked = require('marked');
 var minimist = require('minimist');
 var path = require('path');
-var remote = require('electron').remote;
-var sh = require('shell');
+var electron = require('electron');
+
+var remote = electron.remote;
+var sh = electron.shell;
 
 var mdPrettyProperties = remote.getCurrentWindow().mdPrettyProperties;
 

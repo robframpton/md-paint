@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Robert-Frampton/md-paint",
   "dependencies": {
-    "electron-prebuilt": "^0.37.7",
+    "electron-prebuilt": "^1.0.1",
     "github-markdown-css": "^2.2.1",
     "marked": "^0.3.5",
     "minimist": "^1.2.0"
