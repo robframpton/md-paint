@@ -1,10 +1,11 @@
 'use strict';
 
+var electron = require('electron');
 var fs = require('fs');
+var highlight = require('highlight.js');
 var marked = require('marked');
 var minimist = require('minimist');
 var path = require('path');
-var electron = require('electron');
 
 var remote = electron.remote;
 var sh = electron.shell;
@@ -14,6 +15,12 @@ var mdPrettyProperties = remote.getCurrentWindow().mdPrettyProperties;
 var CWD = process.cwd();
 
 var contentElement;
+
+marked.setOptions({
+	highlight: function (code) {
+		return highlight.highlightAuto(code).value;
+	}
+});
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	contentElement = document.getElementById('content');
