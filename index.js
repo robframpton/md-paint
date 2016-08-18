@@ -8,12 +8,12 @@ var childProcess = require('child_process');
 function mdPaint(filePath) {
 	filePath = resolveFilePath(filePath);
 
-	writeIndex();
-
 	validatePath(filePath, function(err) {
 		if (err) {
 			throw err;
 		}
+
+		writeIndex(filePath);
 
 		var appPath = path.join(__dirname, 'app.js');
 
@@ -46,14 +46,15 @@ function validatePath(filePath, cb) {
 	});
 }
 
-function writeIndex() {
+function writeIndex(filePath) {
 	var tpl = fs.readFileSync(path.join(__dirname, 'public/html/index.tpl'), {
 		encoding: 'utf8'
 	});
 
 	var data = {
 		githubMarkdownStyles: require.resolve('github-markdown-css'),
-		githubSyntaxStyles: path.join(require.resolve('highlight.js'), '../../styles/github.css')
+		githubSyntaxStyles: path.join(require.resolve('highlight.js'), '../../styles/github.css'),
+		title: path.basename(filePath)
 	};
 
 	tpl = tpl.replace(/\$\{([a-zA-Z]+)\}/g, function(match, g1) {

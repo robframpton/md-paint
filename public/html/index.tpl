@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>MD Paint</title>
+		<title>MD Paint - ${title}</title>
 
 		<link rel="stylesheet" href="${githubMarkdownStyles}">
 		<link rel="stylesheet" href="${githubSyntaxStyles}">
