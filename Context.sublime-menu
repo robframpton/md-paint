@@ -1,0 +1,7 @@
+[
+	{
+		"id": "mdPaint",
+		"caption" : "MD Paint",
+		"command" : "markdownpaint"
+	}
+]
