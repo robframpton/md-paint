@@ -4,8 +4,8 @@
 		<meta charset="UTF-8">
 		<title>MD Paint</title>
 
-		<link rel="stylesheet" href="../../node_modules/github-markdown-css/github-markdown.css">
-		<link rel="stylesheet" href="../../node_modules/highlight.js/styles/github.css">
+		<link rel="stylesheet" href="${githubMarkdownStyles}">
+		<link rel="stylesheet" href="${githubSyntaxStyles}">
 
 		<script src="../js/index.js" type="text/javascript"></script>
 	</head>
