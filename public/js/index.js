@@ -7,6 +7,8 @@ var marked = require('marked');
 var minimist = require('minimist');
 var path = require('path');
 
+var renderer = require('../js/renderer.js');
+
 var remote = electron.remote;
 var sh = electron.shell;
 
@@ -19,7 +21,8 @@ var contentElement;
 marked.setOptions({
 	highlight: function (code) {
 		return highlight.highlightAuto(code).value;
-	}
+	},
+	renderer: renderer
 });
 
 document.addEventListener('DOMContentLoaded', function(event) {
