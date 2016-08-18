@@ -1,6 +1,6 @@
 {
   "name": "md-paint",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "View rendered markdown files with github flavored markdown while using your favorite editor",
   "main": "app.js",
   "scripts": {
